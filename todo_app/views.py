@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from todo_app.models import TodoList, TodoListItem
 from django.http import HttpResponse
-import datetime
 
 # Create your views here.
 
