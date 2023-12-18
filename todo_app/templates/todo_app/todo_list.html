@@ -5,18 +5,18 @@
     <div>
         <div>
             <h3>Edit List</h3>
-            <h5> {{todo_list.title | upper}} </h5>
+            <h5> {{todo.title | upper}} </h5>
         </div>
 
         <ul>
-        {% for todo in object_list %}
+        {% for item in items %}
         <li>
             <div>
                 <div
                         role="button"
                         onclick="location.href='#'">
-                        {{ todo.title }}
-                        (Due {{ todo.due_date | date:"l, F j" }})
+                        {{ item.title }}
+                        (Due {{ item.due_date | date:"l, F j" }})
                     </div>
             </div>
         </li>

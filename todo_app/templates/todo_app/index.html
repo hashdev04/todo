@@ -2,12 +2,12 @@
 {% block content %}
 <!--index.html-->
 
-{% if object_list %}
+{% if todos %}
 <h3>All my Lists</h3>
 {% endif %}
 
 <ul>
-    {% for todo_list in object_list %}
+    {% for todo_list in todos %}
     <li>
         <div role="button" onclick="location.href='{% url "list" todo_list.id %}'">
             {{ todo_list.title }}
