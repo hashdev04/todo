@@ -13,11 +13,11 @@
         <li>
             <div>
                 <div
-                        role="button"
-                        onclick="location.href='#'">
-                        {{ item.title }}
-                        (Due {{ item.due_date | date:"l, F j" }})
-                    </div>
+                    role="button"
+                    onclick="location.href='{% url "item-update" todo.id item.id %}'">
+                    {{ item.title }}
+                    (Due {{ item.due_date | date:"l, F j" }})
+                 </div>
             </div>
         </li>
 
@@ -26,7 +26,11 @@
         {% endfor %}
         </ul>
         <p>
-            <input value="Add a new item" type="button" onclick="location.href='#'" />
+            <input 
+                value="Add a new item" 
+                type="button" 
+                onclick="location.href='{% url "item-add" todo.id %}'" 
+            />
         </p>
     </div>
 </div>
